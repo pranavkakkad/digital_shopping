@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 #include <ctime>
 using namespace std;
+enum orderStatus
+{
+  New,
+  Hold,
+  Shipped,
+  Delivered,
+  Closed
+};
 
 class Order
 {
@@ -8,7 +16,7 @@ class Order
   time_t orderDate;
   time_t shipped;
   string address;
-  bool status;
+  enum orderStatus status;
   double amount;
 
 public:
@@ -28,7 +36,7 @@ public:
   {
     address = addr;
   }
-  void setStatus(bool T)
+  void setStatus(enum orderStatus T)
   {
     status = T;
   }
@@ -52,7 +60,7 @@ public:
   {
     return address;
   }
-  bool getStatus()
+  enum orderStatus getStatus()
   {
     return status;
   }
