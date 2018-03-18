@@ -13,8 +13,8 @@ enum orderStatus
 class Order
 {
   int orderNumber;
-  time_t orderDate;
-  time_t shipped;
+  int orderDate;
+  int shipped;
   string address;
   enum orderStatus status;
   double amount;
@@ -24,11 +24,11 @@ public:
   {
     orderNumber = orderNo;
   }
-  void setOrderDate(time_t orderD)
+  void setOrderDate(int orderD)
   {
     orderDate = orderD;
   }
-  void setShippedDate(time_t shipD)
+  void setShippedDate(int shipD)
   {
     shipped = shipD;
   }
@@ -36,10 +36,10 @@ public:
   {
     address = addr;
   }
-  void setStatus(enum orderStatus T)
-  {
-    status = T;
-  }
+  // void setStatus(string T)
+  // {
+  //   status = T;
+  // }
   void setAmount(double cost)
   {
     amount = cost;
@@ -48,11 +48,11 @@ public:
   {
     return orderNumber;
   }
-  time_t getOrderDate()
+  int getOrderDate()
   {
     return orderDate;
   }
-  time_t getShippedDate()
+  int getShippedDate()
   {
     return shipped;
   }
@@ -60,10 +60,11 @@ public:
   {
     return address;
   }
-  enum orderStatus getStatus()
-  {
-    return status;
-  }
+  // enum orderStatus getStatus(int t)
+  // {
+  //   // status = t;
+  //   // return status(t);
+  // }
   double getAmount()
   {
     return amount;
@@ -73,7 +74,7 @@ public:
 // int main()
 // {
 //   Order obj1;
-//   time_t now = time(0);
+//   int now = time(0);
 //   cout << ctime(&now) << endl;
 //   return 0;
 // }

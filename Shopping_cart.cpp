@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-class shopping_cart
+class Shopping_cart
 {
 	int day, mounth, year, p;
 

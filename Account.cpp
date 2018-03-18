@@ -1,27 +1,37 @@
 #include <bits/stdc++.h>
 #include "Shopping_cart.cpp"
-
+#include "Order.cpp"
 using namespace std;
 
 class Account
 {
-  string ID;
+  static int ID;
   string billing_address;
   bool is_closed;
   int open_Date;
   int closed_Date;
+  Shopping_cart *cart;
+  Order *ord1;
 
 public:
   Account()
   {
-    shopping_cart *cart;
+    inc();
+    open_Date = 1;
+    is_closed = false;
+    // ord1->getStatus(1);
   }
-  void getid()
+  ~Account()
   {
-    cout << "Enter your ID:" << endl;
-    cin >> ID;
   }
-
+  void inc()
+  {
+    ID++;
+  }
+  static int getID()
+  {
+    return ID;
+  }
   void get_add()
   {
     cout << "Enter Address" << endl;
