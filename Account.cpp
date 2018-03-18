@@ -1,16 +1,21 @@
 
 #include <bits/stdc++.h>
+#include "Shopping_cart.cpp"
 using namespace std;
 
 class Account
 {
   string ID;
   string billing_address;
-  boolean is_closed;
+  bool is_closed;
   int open_Date;
   int closed_Date;
 
 public:
+  Account()
+  {
+    shopping_cart *cart;
+  }
   void getid()
   {
     cout << "Enter your ID:" << endl;
@@ -20,7 +25,7 @@ public:
   void get_add()
   {
     cout << "Enter Address" << endl;
-    cin >> billing_assress;
+    cin >> billing_address;
   }
   void Show_id()
   {
@@ -28,7 +33,7 @@ public:
   }
   void Show_add()
   {
-    cout << "Your Address is:" << billing_addresss << endl;
+    cout << "Your Address is:" << billing_address << endl;
   }
   void Get_Odate()
   {
@@ -42,14 +47,10 @@ public:
   void Get_cldate()
   {
     cout << "Enter Account closing Date:" << endl;
-    cin >> closed_date;
+    cin >> closed_Date;
   }
   void Show_cldate()
   {
-    cout << "Account Closed Date is:" << closed_date << endl;
-  }
-
-  void is_closed()
-  {
+    cout << "Account Closed Date is:" << closed_Date << endl;
   }
 };
