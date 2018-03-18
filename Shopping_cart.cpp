@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 class shopping_cart
 {
 	int day, mounth, year, p;
@@ -61,7 +60,7 @@ public:
 	}
 };
 
-int main()
-{
-	return 0;
-}
+// int main()
+// {
+// 	return 0;
+// }

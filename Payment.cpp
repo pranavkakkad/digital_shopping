@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-class payment()
+class Payment
 {
   string ID;
   int paid_date, total;
@@ -11,7 +10,7 @@ public:
   void get_id()
   {
     cout << "Enter your ID:" << endl;
-    cin > ID;
+    cin >> ID;
   }
   void paid_Date()
   {
