@@ -13,6 +13,7 @@ int main()
   Person per[10];
   string s, p;
   int cnt = 0, ch;
+  // char s[10] = {0};
   cout << "1. Sign up\t 2. Sign in\n";
   cin >> ch;
   switch (ch)
@@ -26,10 +27,11 @@ int main()
     per[cnt].setLastName();
     cout << "Enter email address\n";
     per[cnt].setEmail();
-
-    A1[cnt].createAc(per[cnt].getEmail(), per[cnt].getPassword());
-
+    cout << "Enter Password\n";
+    per[cnt].setPass();
+    // A1[cnt].createAc(per[cnt].getEmail(), per[cnt].getPass());
     cnt++;
+    cout << "\tAccount Created Successfully\t";
     break;
   case 2:
     cout << "Enter login credentials\n";
