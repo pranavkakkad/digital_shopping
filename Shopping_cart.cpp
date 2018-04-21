@@ -2,7 +2,7 @@
 using namespace std;
 class Shopping_cart
 {
-	int day, mounth, year, p;
+	int day, month, year, p;
 
 public:
 	void creat_date()
@@ -11,15 +11,15 @@ public:
 				 << "enter day" << endl;
 		cin >> day;
 		cout << endl
-				 << "enter mounth" << endl;
-		cin >> mounth;
+				 << "enter month" << endl;
+		cin >> month;
 		cout << endl
 				 << "enter year" << endl;
 		cin >> year;
 	}
 	void saw_date()
 	{
-		cout << day << "/" << mounth << "/" << year << endl;
+		cout << day << "/" << month << "/" << year << endl;
 	}
 	void total_product(int x)
 	{

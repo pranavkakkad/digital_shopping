@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include "Shopping_cart.cpp"
-#include "Order.cpp"
+#include "order.cpp"
+#include "Person.cpp"
 using namespace std;
 
 class Account
@@ -23,6 +24,7 @@ public:
   }
   ~Account()
   {
+
   }
   void inc()
   {
@@ -39,7 +41,7 @@ public:
   }
   void Show_id()
   {
-    cout << "Your ID is:" << ID << endl;
+    cout << "Your ID is:" << getID() << endl;
   }
   void Show_add()
   {
@@ -63,4 +65,18 @@ public:
   {
     cout << "Account Closed Date is:" << closed_Date << endl;
   }
+  void createAc(string email,string pass){
+    Customer C;
+    C.setEmail(email);
+    C.setPassword(pass);
+  }
+  string verifyEmail(){
+    Customer B;
+     return B.getEmail();
+  }
+  string verifyPass(){
+    Customer B1;
+     return B1.getPassword();
+  }
 };
+int Account::ID;
