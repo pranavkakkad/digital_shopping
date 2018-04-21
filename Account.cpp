@@ -24,7 +24,6 @@ public:
   }
   ~Account()
   {
-
   }
   void inc()
   {
@@ -65,18 +64,21 @@ public:
   {
     cout << "Account Closed Date is:" << closed_Date << endl;
   }
-  void createAc(string email,string pass){
-    Customer C;
-    C.setEmail(email);
-    C.setPassword(pass);
-  }
-  string verifyEmail(){
+  // int createAc(string email, string pass)
+  // {
+  //   Customer C;
+  //   C.setEmail(email);
+  //   C.setPassword(pass);
+  // }
+  string verifyEmail()
+  {
     Customer B;
-     return B.getEmail();
+    return B.getEmail();
   }
-  string verifyPass(){
+  string verifyPass()
+  {
     Customer B1;
-     return B1.getPassword();
+    return B1.getPassword();
   }
 };
 int Account::ID;

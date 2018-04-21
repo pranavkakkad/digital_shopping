@@ -42,6 +42,7 @@ public:
 	void setMobile();
 	void setZip();
 	void setGender();
+	friend void writeProductsToFile(Person *p[10], int n, ofstream &fout);
 
 	//Methods to access the data
 	string getFirstName();
@@ -56,17 +57,15 @@ public:
 	long int getMobile();
 	int getZip();
 };
+void writeProductsToFile(Person *p, int n, ofstream &fout)
+{
+	// for (int i = 0; i < n; i++)
+	fout << p->getFirstName() << "\t" << p->getLastname() << "\t" << p->getEmail() << p->getPass() << endl;
+}
+
 void Person::setPass()
 {
-	// char st[10] = {0};
 	cin >> pass;
-	// for (int i = 0; i < 10; i++)
-	// {
-	// 	st[i] = gets();
-	// 	puts('*');
-	// 	if (st[i] == 13)
-	// 		break;
-	// };
 }
 string Person::getPass()
 {

@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
+#include <fstream>
 #include "Account.cpp"
 #include "Payment.cpp"
+// #include "files.cpp"
 // #include <cstring>
 // #include "Order.cpp"
 // #include "Shopping_cart.cpp"
@@ -10,9 +12,11 @@ using namespace std;
 int main()
 {
   Account A1[10];
-  Person per[10];
+  Person *per[10];
   string s, p;
   int cnt = 0, ch;
+  ofstream fout;
+  ifstream fin;
   // char s[10] = {0};
   cout << "1. Sign up\t 2. Sign in\n";
   cin >> ch;
@@ -22,16 +26,17 @@ int main()
     cout << "Create an account\n";
     cout << "Please enter signup credentials\n";
     cout << "Enter first Name:\n";
-    per[cnt].setFirstName();
+    per[cnt]->setFirstName();
     cout << "Enter last Name:\n";
-    per[cnt].setLastName();
+    per[cnt]->setLastName();
     cout << "Enter email address\n";
-    per[cnt].setEmail();
+    per[cnt]->setEmail();
     cout << "Enter Password\n";
-    per[cnt].setPass();
+    per[cnt]->setPass();
+    writeProductsToFile(p[cnt], 10, fout);
     // A1[cnt].createAc(per[cnt].getEmail(), per[cnt].getPass());
+    cout << "\tAccount Created Successfully\t\n";
     cnt++;
-    cout << "\tAccount Created Successfully\t";
     break;
   case 2:
     cout << "Enter login credentials\n";
@@ -51,7 +56,7 @@ int main()
         cin >> p;
         if (strcmp(p.c_str(), A1[i].verifyPass().c_str()) == 0)
         {
-          cout << "Welcome " << per[i].getFirstName();
+          cout << "Welcome " << per[i]->getFirstName();
         }
       }
       else
